@@ -1,4 +1,4 @@
-module Vignere where
+module Cipher where
 
 import Data.Char (chr, isLower, isUpper, ord)
 
