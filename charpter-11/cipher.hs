@@ -10,7 +10,7 @@ setChar flip keyChar char
   where
     shiftChar base c = chr $ (ord c - ord base + shift) `mod` 26 + ord base
       where
-        shift = if flip then ord base - ord keyChar else ord keyChar - ord base
+        shift = if flip then ord keyChar - ord base else ord base - ord keyChar
 
 vigenereEncrypt :: String -> String -> String
 vigenereEncrypt key = zipWith (setChar True) (cycle key)
@@ -20,5 +20,5 @@ vigenereDecrypt key = zipWith (setChar False) (cycle key)
 
 main :: IO ()
 main = do
-  print $ vigenereEncrypt "ABCD EF G" "This is a test."
-  print $ vigenereDecrypt "ABCD EF G" "Tmmv kt a yivg."
+  print $ vigenereEncrypt "ALLY" "MEET AT DAWN"
+  print $ vigenereDecrypt "ALLY" "MPPR LE DLHL"
