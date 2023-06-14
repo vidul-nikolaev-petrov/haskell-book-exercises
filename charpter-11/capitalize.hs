@@ -21,5 +21,5 @@ capitalizeParagraph = capitalizeWord . unwords . capitalize . words
 main :: IO ()
 main = do
   print $ capitalizeWord "Tester"
-  print $ capitalizeWord "Tester"
+  print $ capitalizeWord "tester"
   print $ capitalizeParagraph "bla. new blue sky. dom el."
