@@ -8,7 +8,7 @@ isSubseqOf [] _ = True
 isSubseqOf (x : xs) seq = elem x seq && isSubseqOf xs seq
 
 capitalizeWords :: String -> [(String, String)]
-capitalizeWords xs = map (\t@(x : xs) -> (t, toUpper x : xs)) $ words xs
+capitalizeWords = map (\t@(x : xs) -> (t, toUpper x : xs)) . words
 
 main :: IO ()
 main = do
