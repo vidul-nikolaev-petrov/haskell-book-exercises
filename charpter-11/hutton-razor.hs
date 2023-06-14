@@ -1,7 +1,5 @@
 module HuttonRazor where
 
-import Language.Haskell.TH (Exp)
-
 data Expr
   = Lit Integer
   | Add Expr Expr

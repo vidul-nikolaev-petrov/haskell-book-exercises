@@ -1,4 +1,4 @@
-module Main where
+module Capitalize where
 
 import Data.Char (isLower, toUpper)
 
